@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+.container {
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 220px;
+    grid-template-areas: "header" "section";
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    border-bottom: 1px solid gray;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box__img {
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.imagen__header {
+    width: 50px;
+}
+
+.titulo__header {
+    color: #2A69A1;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 10px;
+    align-self: center;
+}
+
+.nav {
+    margin-left: auto;
+    font-size: 10px;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    height: 100%;
+}
+
+.nav__list li:hover {
+    background-color: #2A69A1;
+}
+
+.nav__link:hover {
+    color: white;
+}
+
+.aplicacion,
+.ayuda {
+    display: none;
+}
+
+.section {
+    grid-area: section;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.section__box__img {
+    margin-left: auto;
+    border: 1px solid black;
+    width: 130px;
+}
+
+.section__box__img img {
+    width: 100%;
+}
+
+.section__text {
+    font-weight: 100;
+    border: 1px solid indigo;
+    width: 205px;
+    font-size: 17px;
+    margin-top: -20px;
+}
+
+.azul_negrita {
+    font-weight: bold;
+    color: #4BAAD3;
+}
+
+.text2 {
+    margin-top: 40px;
+    animation-name: Mueve;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    color: #2b6aa1;
+    font-weight: bold;
+}
+
+@keyframes Mueve {
+    from {
+        opacity: 1;
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+    to {
+        opacity: 0;
+    }
+}

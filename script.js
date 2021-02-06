@@ -1,4 +1,4 @@
-let calcular = document.getElementById("calcular");
+/* let calcular = document.getElementById("calcular");
 let select = document.getElementById("select");
 let select2 = document.getElementById("select2");
 let cantidad = document.getElementById("cantidad");
@@ -21,10 +21,13 @@ const lista = () => {
         console.log(datos)
 
 
-        for (var i in datos) {
-            console.log(datos[i])
-            console.log(i)
-            let opt = document.createElement("OPTION");
+        for (var i in datos) { */
+//lo recorro con un for in ya que al ser uin objeto no puedo recorrerlo con un for of
+//la i en este caso es el indice pero la necesito ya que en este array el indice es la moneda
+
+/* console.log(datos[i])
+console.log(i) */
+/* let opt = document.createElement("OPTION");
             opt.textContent = i;
             select.value = i;
             fragment.append(opt);
@@ -44,7 +47,7 @@ document.addEventListener("DOMContentLoaded", lista)
 
 
 
-/* const calculo = () => {
+const calculo = () => {
     fetch("https://cors-anywhere.herokuapp.com/http://api.cambio.today/v1/quotes/" + select.value + "/" + select2.value + "/json?quantity=" + cantidad.value + "&key=7579|~1DFiM2q0GoTPeGr1^KMY0bryYPgE3jZ")
         .then((response) => response.json())
         .then(JSON => {
