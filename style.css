@@ -8,12 +8,13 @@
 .container {
     padding: 1rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 220px;
-    grid-template-areas: "header" "section";
+    grid-template-rows: 60px 220px 1fr;
+    grid-template-areas: "header" "section" "footer";
     gap: 10px;
+    margin: 0 auto;
 }
 
 .header {
@@ -83,6 +84,13 @@
     border: 1px solid red;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-image: url("fondo-section.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 5px;
 }
 
 .section__box__img {
@@ -100,7 +108,36 @@
     border: 1px solid indigo;
     width: 205px;
     font-size: 17px;
-    margin-top: -20px;
+}
+
+.section__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.boton-section {
+    background-color: white;
+    border: 1px solid #4BAAD3;
+    transition: background-color 1s;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    padding: 3px;
+    transition: color 1s;
+}
+
+.boton-section:hover {
+    background-color: #4BAAD3;
+}
+
+.link:hover {
+    color: white;
 }
 
 .azul_negrita {
@@ -127,4 +164,50 @@
     to {
         opacity: 0;
     }
+}
+
+footer {
+    grid-area: footer;
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imagen-footer {
+    width: 30px;
+}
+
+.columnas {
+    list-style: none;
+    font-size: 8px;
+    padding: 5px;
+}
+
+.titulo-list {
+    color: white;
+    font-weight: bold;
+}
+
+.list__link {
+    text-decoration: none;
+    color: white;
+}
+
+.list__link:hover {
+    text-decoration: underline;
+}
+
+.padding {
+    color: white;
+    padding: 5px 0px;
+}
+
+.input-footer {
+    font-size: 10px;
+    margin: 5px 0px;
+}
+
+.boton-footer {
+    width: 100%;
 }
