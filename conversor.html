@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="logo2.png">
     <link rel="stylesheet" href="estilos2.css">
+    <link rel="stylesheet" href="responsive2.css">
     <title>Conversor</title>
 </head>
 
@@ -36,19 +37,27 @@
                 </ul>
             </nav>
         </header>
-        <div class="container-conversor">
+        <section class="container-conversor" id="form">
             <H1>Conversión de Monedas</H1>
             <div class="form">
                 <input type="number" id="cantidad" placeholder="Cantidad">
                 <select name="" id="select">
                     <option value="EUR" selected>EUR</option>
-                </select> a
+                </select> ⇄
                 <select name="" id="select2">
                     <option value="" selected></option>
                 </select>
-                <input type="submit" value="Calcular" id="calcular">
+                <input type="submit" value="➤" id="calcular" class="calcular">
             </div>
-        </div>
+        </section>
+
+
+        <article class="article-conversor">
+            <h3>Galeria de las monedas soportadas en esta Web</h3>
+        </article>
+
+        <section class="galeria" id="galeria">
+        </section>
 
         <footer>
             <ul class="column1 columnas">

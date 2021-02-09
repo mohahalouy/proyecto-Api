@@ -1,0 +1,35 @@
+@media screen and (min-width:600px) {
+    .ayuda {
+        display: block;
+    }
+    .section__box__img {
+        display: block;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .aplicacion {
+        display: block;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .columnas {
+        font-size: 15px;
+    }
+    .input-footer {
+        width: 100%;
+    }
+    .nav {
+        font-size: 15px;
+    }
+    .container {
+        grid-template-rows: 60px 130px 30px 1fr 150px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        grid-template-rows: 60px 130px 30px 1fr 150px;
+    }
+}

@@ -2,6 +2,7 @@ let calcular = document.getElementById("calcular");
 let select = document.getElementById("select");
 let select2 = document.getElementById("select2");
 let cantidad = document.getElementById("cantidad");
+let form = document.getElementById("form");
 
 const lista = () => {
     fetch("https://openexchangerates.org/api/currencies.json")
@@ -20,7 +21,7 @@ const lista = () => {
             //la i en este caso es el indice pero la necesito ya que en este array el indice es la moneda
 
             /* console.log(datos[i])
-                  console.log(i) */
+                                                            console.log(i) */
             let opt = document.createElement("OPTION");
             opt.textContent = i;
             select.value = i;
@@ -38,19 +39,59 @@ const lista = () => {
 
 document.addEventListener("DOMContentLoaded", lista);
 
-/*
-
 const calculo = () => {
-    fetch("https://cors-anywhere.herokuapp.com/http://api.cambio.today/v1/quotes/EUR/USD/json?quantity=1&key=7613|kWCPohtrSfKkBG~DyoOzP7G*ZJSZm3VX")
+    fetch(
+            "https://cors-anywhere.herokuapp.com/http://api.cambio.today/v1/quotes/" +
+            select.value +
+            "/" +
+            select2.value +
+            "/json?quantity=" +
+            cantidad.value +
+            "&key=7613|kWCPohtrSfKkBG~DyoOzP7G*ZJSZm3VX"
+        )
         .then((response) => response.json())
-        .then(JSON => {
-            console.log(JSON)
+        .then((JSON) => {
+            console.log(JSON);
             mostrarDatos(JSON);
-
         });
     mostrarDatos = (datos) => {
+        resultado = datos.result.value;
+        let input = document.createElement("INPUT");
+        input.value = resultado;
+        input.style.textAlign = "center";
+        form.appendChild(input);
 
+        form.removeChild(form.childNodes[4]);
+    };
+};
+
+calcular.addEventListener("click", calculo);
+
+let fotos = [
+    "peso.jpg",
+    "libra.jpg",
+    "dolar.jpg",
+    "euro.jpg",
+    "dirham.jpg",
+    "dirham2.jpg",
+    "suriname.jpg",
+    "laotian.jpg",
+    "uganda.jpg",
+    "panamanian.jpg",
+];
+
+let galeria = document.getElementById("galeria");
+
+const Imagenes = () => {
+    for (let i = 0; i < fotos.length; i++) {
+        let ale = Math.floor(Math.random() * fotos.length);
+        let imagen = document.createElement("IMG");
+        imagen.src = fotos[ale];
+        imagen.style.width = 100 + "%";
+        imagen.style.height = 100 + "%";
+        imagen.style.objectFit = "cover";
+        imagen.style.borderRadius = 5 + "px";
+        galeria.appendChild(imagen);
     }
-}
-
-calcular.addEventListener("click", calculo) */
+};
+document.addEventListener("DOMContentLoaded", Imagenes);
