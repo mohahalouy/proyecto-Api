@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="logo2.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="estilos2.css">
     <title>Conversor</title>
 </head>
 
@@ -37,34 +36,19 @@
                 </ul>
             </nav>
         </header>
-        <div class="conteinerflex">
-            <section class="section">
-                <div class="section__text">
-                    <div class="text">
-                        <p>¡Convierte tu <span class="azul_negrita">dinero</span> en cuestión de segundos!</p>
-                    </div>
-                    <div class="text2">
-                        <p>Sin tener que pensar :)</p>
-                    </div>
-                    <button class="boton-section"><a class="link" href="conversor.html">Comenzar</a></button>
-
-                </div>
-
-                <div class="section__box__img">
-                    <img src="tarro.png" alt="">
-                </div>
-
-                <div class="section__box__img2">
-                    <img src="imagen_section.png" alt="">
-                </div>
-
+        <div class="container-conversor">
+            <H1>Conversión de Monedas</H1>
+            <div class="form">
+                <input type="number" id="cantidad" placeholder="Cantidad">
+                <select name="" id="select">
+                    <option value="EUR" selected>EUR</option>
+                </select> a
+                <select name="" id="select2">
+                    <option value="" selected></option>
+                </select>
+                <input type="submit" value="Calcular" id="calcular">
+            </div>
         </div>
-
-        </section>
-
-        <section class="section2 section2__box__img">
-            <img src="imagen2-section.jpg" alt="">
-        </section>
 
         <footer>
             <ul class="column1 columnas">
@@ -114,20 +98,7 @@
 
 
     </div>
-    <!--     <div class="container">
-        <H1>Conversión de Monedas</H1>
-        <div class="form">
-            <input type="number" id="cantidad" placeholder="Cantidad">
-            <select name="" id="select">
-                <option value="EUR" selected>EUR</option>
-            </select> a
-            <select name="" id="select2">
-                <option value="" selected></option>
-            </select>
-            <input type="submit" value="Calcular" id="calcular">
-        </div>
-    </div>
- -->
+
 
     <script src="script.js"></script>
 </body>
